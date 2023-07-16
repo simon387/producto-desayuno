@@ -1,0 +1,85 @@
+### get all suppliers
+GET {{baseURL}}/supplier/readAll.php
+Accept: application/json
+
+### edit a supplier
+PUT {{baseURL}}/supplier/update.php
+Content-Type: application/json
+
+{
+  "id" : "1",
+  "name" : "sin proveedor"
+}
+
+### create a new supplier
+POST {{baseURL}}/supplier/create.php
+Content-Type: application/json
+
+{
+  "name" : "gatto"
+}
+
+### get all products by supplier id and period id
+GET {{baseURL}}/product/read.php?supplier_id=2&period_id=1
+Accept: application/json
+
+### update a product with new quantities
+PUT {{baseURL}}/product/update.php
+Content-Type: application/json
+
+{
+  "id" : "9374",
+  "deposit" : "10",
+  "outflow0" : "2",
+  "outflow1" : "4",
+  "left" : "6",
+  "userId" : 1,
+  "lastOperation" : "Valeria ha sottratto un cuore"
+}
+
+### search a product
+POST {{baseURL}}/product/search.php
+Content-Type: application/json
+
+{
+  "query" : "salsa",
+  "period" : "1"
+}
+
+### get last period
+GET {{baseURL}}/period/readLast.php
+Accept: application/json
+
+### create a new period
+POST {{baseURL}}/period/create.php
+
+### get previous period
+GET {{baseURL}}/period/previous.php?id=19
+Accept: application/json
+
+### get next period
+GET {{baseURL}}/period/next.php?id=19
+Accept: application/json
+
+### get all periods
+GET {{baseURL}}/period/readAll.php
+
+### delete a period
+DELETE {{baseURL}}/period/delete.php?id=3
+
+### get all operations
+GET {{baseURL}}/operation/readAll.php
+
+### get user info
+GET {{baseURL}}/user/read.php?id=1
+
+### get all categories
+GET {{baseURL}}/controllers/category.php
+
+### login
+POST http://localhost/producto-desayuno/login.php?email=andres%40almacen.com&password=pass
+
+### get products by category and period
+GET {{baseURL}}/product/read.php?category_id=1&period_id=1
+Accept: application/json
+Content-Type: application/json
