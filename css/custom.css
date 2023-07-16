@@ -1,0 +1,53 @@
+.bg-login-image {
+    background: url("../img/logo.png") center no-repeat;
+    background-size: auto;
+}
+
+#main-paginator {
+    overflow: auto;
+}
+
+#dataTableDashboard_paginate {
+    float: right;
+}
+
+#dataTableDashboard_filter {
+    float: right;
+}
+
+#dataTableLogs_paginate {
+    float: right;
+}
+
+#dataTableLogs_filter {
+    float: right;
+}
+
+#dataTablePeriods_paginate {
+    float: right;
+}
+
+#dataTablePeriods_filter {
+    float: right;
+}
+
+#dataTableSuppliers_paginate {
+    float: right;
+}
+
+#dataTableSuppliers_filter {
+    float: right;
+}
+
+#dataTableProducts_paginate {
+    float: right;
+}
+
+#dataTableProducts_filter {
+    float: right;
+}
+
+.category-selector {
+    height: 3.4375em;
+    padding: 13px!important;
+}

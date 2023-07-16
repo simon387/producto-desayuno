@@ -1,0 +1,28 @@
+on:
+  push:
+    branches: [ master ]
+name: 🚀 Deploy website on push with minify
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+
+      - name: Minify Action
+        uses: anthonyftwang/minify-action@v1.0.1
+
+#      - name: 📂 Sync files
+#        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+#        with:
+#          server: ${{ secrets.ftp_server }}
+#          username: ${{ secrets.ftp_username }}
+#          password: ${{ secrets.ftp_password }}
+#          exclude: '[**/.git*, **/.git*/**, **/node_modules/**, deploy_localhost.*, README.md, **/docs/**, **/test/**, **/sql/**, LICENSE]'
+
+#      - name: Auto committing minified files to a separate branch
+#        uses: stefanzweifel/git-auto-commit-action@v4
+#        with:
+#          commit_message: "Github Action: Auto Minified JS, HTML and CSS files"
+#          branch: minified
