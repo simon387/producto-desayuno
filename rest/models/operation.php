@@ -3,7 +3,7 @@
 class Operation
 {
 	private $conn;
-	private $table_name = "lcga_operation";
+	private $table_name = "pd_operation";
 	public $id;
 	public $user;
 	public $timestamp;
@@ -30,7 +30,7 @@ class Operation
 	//FIX ME generalize the operation table
 	function readAll()
 	{
-		$query = "select o.id, u.name as user, o.timestamp, concat(s.name, ' - ', p.name) as product, o.description from lcga_operation o, lcga_user u, lcga_product p, lcga_supplier s where o.user_ = u.id and o.product = p.id and p.supplier = s.id union ( select o.id, u.name as user, o.timestamp, '' as product, o.description from lcga_operation o, lcga_user u where o.user_ = u.id and o.product is null) order by timestamp desc";
+		$query = "select o.id, u.name as user, o.timestamp, concat(s.name, ' - ', p.name) as product, o.description from pd_operation o, pd_user u, pd_product p, pd_supplier s where o.user_ = u.id and o.product = p.id and p.supplier = s.id union ( select o.id, u.name as user, o.timestamp, '' as product, o.description from pd_operation o, pd_user u where o.user_ = u.id and o.product is null) order by timestamp desc";
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
 		return $stmt;

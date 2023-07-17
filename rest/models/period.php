@@ -6,7 +6,7 @@ include_once '../models/operation.php';
 class Period
 {
 	private $conn;
-	private $table_name = "lcga_period";
+	private $table_name = "pd_period";
 	public $id;
 	public $start;
 	public $end;
@@ -107,8 +107,8 @@ class Period
 		extract($row);
 		$newId = $id;
 
-		$query = "INSERT INTO lcga_product (category, name, supplier, unit, note, deposit0, outflow0, outflow1, `left`, period) " .
-			"SELECT category, name, supplier, unit, note, `left`, 0, 0, `left`, " . $newId . " FROM lcga_product p WHERE p.period =" . $oldId;
+		$query = "INSERT INTO pd_product (category, name, supplier, unit, note, deposit0, outflow0, outflow1, `left`, period) " .
+			"SELECT category, name, supplier, unit, note, `left`, 0, 0, `left`, " . $newId . " FROM pd_product p WHERE p.period =" . $oldId;
 		$stmt = $this->conn->prepare($query);
 		return $stmt->execute();
 	}

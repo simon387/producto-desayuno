@@ -23,7 +23,7 @@ class Database
 
 	function getUserByEmailAndPassword($email_, $pass_)
 	{
-		$query = "SELECT u.id, u.email, u.name, r.name as role FROM lcga_user u, lcga_role r WHERE " .
+		$query = "SELECT u.id, u.email, u.name, r.name as role FROM pd_user u, pd_role r WHERE " .
 			"u.email = '" . $email_ . "' AND u.pass = '" . $pass_ . "' and u.role = r.id";
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
