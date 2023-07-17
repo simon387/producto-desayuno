@@ -3,7 +3,7 @@
 class Supplier
 {
 	private $conn;
-	private $table_name = "lcga_supplier";
+	private $table_name = "pd_supplier";
 	public $id;
 	public $name;
 

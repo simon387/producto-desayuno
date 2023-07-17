@@ -5,7 +5,7 @@ include_once '../config/database.php';
 class Category
 {
 	private $conn;
-	private $table_name = "lcga_category";
+	private $table_name = "pd_category";
 	public $id;
 	public $name;
 

@@ -19,7 +19,7 @@ class Config
 
 ## Database's diagram
 
-![image info](./producto-desayuno.png)
+![image info](./productodesayuno.png)
 
 ## links
 
