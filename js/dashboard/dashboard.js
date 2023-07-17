@@ -299,15 +299,15 @@ function updateProduct(id, operation) {
 	let num;
 	switch (operation) {
 		case 0:
-			operation = "<em>Almacen</em>";
+			operation = "<em>Nevera</em>";
 			num = deposit0;
 			break;
 		case 1:
-			operation = "<em>Servicio</em>";
+			operation = "<em>Pase</em>";
 			num = deposit1;
 			break;
 		case 2:
-			operation = "<em>Salida Servicio</em>";
+			operation = "<em>Salida Servicio</em>"; // non ricordo a che serviva
 			num = outflow0;
 			break;
 	}
