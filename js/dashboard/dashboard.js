@@ -113,6 +113,7 @@ const dataTableDashboard = $('#dataTableDashboard').DataTable({
 	rowReorder: {
 		selector: 'td:nth-child(2)'
 	},
+	iDisplayLength: 100,
 });
 
 function getLastPeriod() {
@@ -192,6 +193,7 @@ function getCategories() {
 		success: function (data) {
 			const array = data.list;
 			let innerHTML = "";
+			document.getElementById("category-selected").innerHTML = 'Todas';
 			for (let i = 1; i < array.length; i++) {
 				let active = "";
 				if (i === 1) {
