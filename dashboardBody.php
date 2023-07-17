@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="d-sm-flex align-items-center justify-content-between mb-4">
 		<h1 class="h3 mb-0 text-gray-800">Producto Desayuno</h1>
-		<div>
+		<div class="d-none d-md-block"><!-- per valeria -->
 			<button class="btn btn-info btn-icon-split btn-sm" id="btn-prev-page">
 				<span class="icon text-white-50">
 					<em class="fas fa-arrow-left"></em>
@@ -40,9 +40,9 @@
 						<th data-priority="1" scope="row" class="col" data-field="name">Producto</th>
 						<th data-priority="6" scope="row" class="col" data-field="unit">Unidad</th>
 						<th data-priority="7" scope="row" class="col" data-field="note">Note</th>
-						<th data-priority="2" scope="row" class="col" data-field="deposit0">Almacen</th>
-						<th data-priority="3" scope="row" class="col" data-field="deposit1">Servicio</th>
-						<th data-priority="4" scope="row" class="col" data-field="left">Cuanto Quedan</th>
+						<th data-priority="3" scope="row" class="col" data-field="deposit0">Almacen</th>
+						<th data-priority="4" scope="row" class="col" data-field="deposit1">Servicio</th>
+						<th data-priority="2" scope="row" class="col" data-field="left">Cuanto Quedan</th>
 						<th data-priority="5" scope="row" class="col" data-field="lastOperation">Última Edición</th>
 					</tr>
 					</thead>
