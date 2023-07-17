@@ -10,8 +10,8 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
 
-      - name: Minify Action
-        uses: anthonyftwang/minify-action@v1.0.1
+#      - name: Minify Action
+#        uses: anthonyftwang/minify-action@v1.0.1
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
