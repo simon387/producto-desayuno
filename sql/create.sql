@@ -151,6 +151,7 @@ INSERT INTO pd_product (name, category, supplier, period) VALUES ('brie', 1, 1, 
 INSERT INTO pd_product (name, category, supplier, period) VALUES ('lomo iberico', 1, 1, 1);
 INSERT INTO pd_product (name, category, supplier, period) VALUES ('pastrami', 1, 1, 1);
 INSERT INTO pd_product (name, category, supplier, period) VALUES ('fuet', 1, 1, 1);
+INSERT INTO pd_product (name, category, supplier, period) VALUES ('ajo blanco', 1, 1, 1);
 
 
 

@@ -1,3 +1,7 @@
+Version 1.0.2
+- added ajo blanco
+- added order by name in query product
+
 Version 1.0.1
 - added fuet as product
 - added caps to products frontend
