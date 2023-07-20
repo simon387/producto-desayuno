@@ -271,7 +271,7 @@ function renderTableDashboard(dataTable, data, isFromSearch = false) {
 		const left = calcFlow(deposit0, deposit1);
 		const lastOperation = null === o["lastOperation"] ? "" : o["lastOperation"];
 		dataTable.row.add([
-			name,
+			name.toUpperCase(),
 			unit,
 			note,
 			'<input onkeypress="return event.charCode >= 48 && event.charCode <= 57" oninput="this.value = Math.round(this.value)" onchange="updateProduct(' + id + ', 0)" type="number" min="0" step="1" value="' + deposit0 + '" class="form-control" id="deposit0-' + id + '">',

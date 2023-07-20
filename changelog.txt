@@ -1,1 +1,5 @@
+Version 1.0.1
+- added fuet as product
+- added caps to products frontend
+
 Version 1.0.0
