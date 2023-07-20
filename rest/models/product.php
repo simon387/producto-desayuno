@@ -42,7 +42,7 @@ class Product
 		$query = "SELECT p.id, p.category, p.name, p.supplier, p.unit, p.deposit0, p.deposit1, p.outflow0, " .
 			"p.outflow1, p.left, p.period, p.note, (select description from pd_operation o where o.product = p.id order by " .
 			"timestamp desc limit 1) as 'lastOperation' FROM " . $this->table_name . " p WHERE " .
-			"p.category = " . $categoryID . " AND p.period = " . $periodID;
+			"p.category = " . $categoryID . " AND p.period = " . $periodID . " ORDER BY p.name";
 
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
@@ -97,7 +97,7 @@ class Product
 		$query = "select p.id, p.category, p.name, s.name as supplier, p.unit, p.deposit0, p.deposit1, p.outflow0, p.outflow1, p.`left`, p.note" .
 			",(select description from pd_operation o where o.product = p.id order by timestamp desc limit 1) as 'lastOperation' " .
 			"from " . $this->table_name . " p, pd_supplier s where p.supplier = s.id and p.period = " . $period_ .
-			" and p.name like '%" . $query_ . "%'";
+			" and p.name like '%" . $query_ . "%' ORDER BY p.name";
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
 		return $stmt;
@@ -115,7 +115,7 @@ class Product
 	function findAllInLastPeriod(): ?array
 	{
 		$query = "SELECT p.id, p.name, p.supplier, p.unit, p.note FROM " . $this->table_name . " p WHERE " .
-			"p.period = (select id from pd_period where actual = true)";
+			"p.period = (select id from pd_period where actual = true) ORDER BY p.name";
 
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
