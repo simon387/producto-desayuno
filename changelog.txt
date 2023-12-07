@@ -1,3 +1,6 @@
+Version 1.0.3
+- update license
+
 Version 1.0.2
 - added ajo blanco
 - added order by name in query product
